@@ -1,0 +1,9 @@
+<extentreports>
+  <configuration>
+    <theme>dark</theme>
+    <documentTitle>Automation Execution Report</documentTitle>
+    <reportName>Cucumber Suite</reportName>
+    <timelineEnabled>true</timelineEnabled>
+    <encoding>utf-8</encoding>
+  </configuration>
+</extentreports>
