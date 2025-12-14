@@ -31,14 +31,10 @@ public class StudentLoginPageStepDef extends BaseClass {
 		}
 		sp.enterUserName(user);
 		sp.enterPassword(pwd);
+		System.out.println("Username entered: " + user);
+		System.out.println("Password entered: " + pwd);
 
 
-	}
-
-	@When("user enters valid username and password")
-	public void user_enters_valid_username_and_password() {
-		sp.enterUserName(config.getProperty("userId"));
-		sp.enterPassword(config.getProperty("pwd"));
 	}
 
 	@When("clicks on login button")
@@ -67,8 +63,7 @@ public class StudentLoginPageStepDef extends BaseClass {
 	public void an_error_message_should_be_displayed(String err) {
 		String actualMessage = sp.getErrorMessage();
 		Assert.assertTrue(actualMessage.contains(err),
-			    "Expected error message to contain: " + err + " but got: " + actualMessage);
+				"Expected error message to contain: " + err + " but got: " + actualMessage);
 	}
 
-	
 }
