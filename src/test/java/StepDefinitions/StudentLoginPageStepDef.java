@@ -29,8 +29,9 @@ public class StudentLoginPageStepDef extends BaseClass {
 			pwd = config.getProperty("userPass");
 
 		}
-		sp.enterPassword(pwd);
 		sp.enterUserName(user);
+		sp.enterPassword(pwd);
+
 
 	}
 
