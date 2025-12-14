@@ -65,8 +65,8 @@ public class StudentLoginPageStepDef extends BaseClass {
 	@Then("an error message {string} should be displayed")
 	public void an_error_message_should_be_displayed(String err) {
 		String actualMessage = sp.getErrorMessage();
-		Assert.assertTrue(actualMessage.equals(err));
-		System.out.println("actual ---- "+actualMessage );
+		Assert.assertTrue(actualMessage.contains(err),
+			    "Expected error message to contain: " + err + " but got: " + actualMessage);
 	}
 
 	

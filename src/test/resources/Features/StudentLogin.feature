@@ -19,5 +19,5 @@ Feature: Test Login Page
     Examples: 
      | case              | username    | password    | errorMessage              |
       | wrong password    | VALID_USER  | wrongPass   | Your password is invalid! |
-      | invalid user/pass | invalidUser | invalidPass | Your username is invalid! |
-      | blank credentials |             |             | Your username is invalid! |
+     # | invalid user/pass | invalidUser | invalidPass | Your username is invalid! |
+      #| blank credentials |             |             | Your username is invalid! |

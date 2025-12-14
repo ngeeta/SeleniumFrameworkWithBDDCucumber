@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary">Cucumber Suite</span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">Dec 14, 2025 06:52:41 pm</span></a>
+<a href="#"><span class="badge badge-primary">Dec 14, 2025 08:19:19 pm</span></a>
 </li>
 </ul>
 </div>
@@ -86,7 +86,7 @@
           <div class="test-detail">
             <p class="name">Test Login Page</p>
             <p class="text-sm">
-              <span>18:52:41</span> / <span>00:00:11:383</span>
+              <span>20:19:20</span> / <span>00:00:10:420</span>
               <span class="badge fail-bg log float-right">Fail</span>
             </p>
           </div>
@@ -95,9 +95,9 @@
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-fail">Test Login Page</h5>
-<span class='badge badge-success'>12.14.2025 18:52:41</span>
-<span class='badge badge-danger'>12.14.2025 18:52:53</span>
-<span class='badge badge-default'>00:00:11:383</span>
+<span class='badge badge-success'>12.14.2025 20:19:20</span>
+<span class='badge badge-danger'>12.14.2025 20:19:30</span>
+<span class='badge badge-default'>00:00:10:420</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -149,36 +149,7 @@
             <div class="card-body l1">
               <div class="card-header">
                 <div class="card-title outline-child">
-                  <div class="node" id="5"><span class="badge log pass-bg mr-2">Pass</span>Invalid login – blank credentials</div>
-                </div>
-              </div>
-              <div class="card-body mt-3 collapse">
-                  <div class="step pass-bg">
-                    <span>Given user is on the login page</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>When the user enters username "" and password ""</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>And clicks on login button</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>Then an error message "Your username is invalid!" should be displayed</span>
-      <div>
-      </div>
-                  </div>
-              </div>
-            </div>
-            <div class="card-body l1">
-              <div class="card-header">
-                <div class="card-title outline-child">
-                  <div class="node" id="6"><span class="badge log fail-bg mr-2">Fail</span>Invalid login – wrong password</div>
+                  <div class="node" id="5"><span class="badge log fail-bg mr-2">Fail</span>Invalid login – wrong password</div>
                     <div class="status-avatar float-right">
                       <i class="fa fa-paperclip"></i>
                     </div>
@@ -203,13 +174,12 @@
                   <div class="step fail-bg">
                     <span>Then an error message "Your password is invalid!" should be displayed</span>
       <div>
-        <textarea disabled class="code-block">java.lang.AssertionError: expected [true] but found [false]
+        <textarea disabled class="code-block">java.lang.AssertionError: Expected error message to contain: Your password is invalid! but got: Your username is invalid! expected [true] but found [false]
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.failNotEquals(Assert.java:1590)
 	at org.testng.Assert.assertTrue(Assert.java:57)
-	at org.testng.Assert.assertTrue(Assert.java:67)
 	at StepDefinitions.StudentLoginPageStepDef.an_error_message_should_be_displayed(StudentLoginPageStepDef.java:68)
-	at ✽.an error message "Your password is invalid!" should be displayed(file:///D:/Edrive/Study/Geeta_Workspace/com.SeleniumBDDTestNg/src/test/resources/Features/StudentLogin.feature:16)
+	at ✽.an error message "Your password is invalid!" should be displayed(file:///D:/Edrive/Study/Geeta_Workspace/com.SeleniumBDDTestNg/src/test/resources/Features/StudentLogin.feature:17)
 </textarea>
       
       </div>
@@ -228,6 +198,35 @@
 </div>
       <div>Scenario failed: Invalid login – wrong password
       </div>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="6"><span class="badge log pass-bg mr-2">Pass</span>Invalid login – blank credentials</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given user is on the login page</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When the user enters username "" and password ""</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And clicks on login button</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then an error message "Your username is invalid!" should be displayed</span>
       <div>
       </div>
                   </div>
@@ -320,9 +319,9 @@
 <tbody>
 <tr class="tag-test-status" status="fail">
 <td><span class="badge log fail-bg">Fail</span></td>
-<td>18:52:51 pm</td>
+<td>20:19:28 pm</td>
 <td>
-<a href="#" class="linked" test-id='1' id='24'>Then an error message "Your password is invalid!" should be displayed</a>
+<a href="#" class="linked" test-id='1' id='27'>Then an error message "Your password is invalid!" should be displayed</a>
 <div class="">
 <span class="badge badge-default">Test Login Page.Invalid login – wrong password.Then an error message "Your password is invalid!" should be displayed</span>
 </div>
@@ -345,13 +344,13 @@
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>Dec 14, 2025 06:52:41 pm</h3>
+<h3>Dec 14, 2025 08:19:19 pm</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>Dec 14, 2025 06:52:53 pm</h3>
+<h3>Dec 14, 2025 08:19:30 pm</h3>
 </div></div>
 </div>
 <div class="col-md-3">
@@ -441,7 +440,7 @@
 </div></div>
 <script>
 var timeline = {
-"Test Login Page":11.383
+"Test Login Page":10.42
 };
 </script>
 <div class="row">
