@@ -1,5 +1,6 @@
 package StepDefinitions;
 
+import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 
 import Base.BaseClass;
@@ -12,8 +13,10 @@ public class StudentLoginPageStepDef extends BaseClass {
 
 	@Given("user is on the login page")
 	public void user_is_on_the_login_page() {
-		BaseClass.driver.get(config.getProperty("StudentLoginPage"));
-		sp = new StudentLoginPage(BaseClass.driver);
+		sp = new StudentLoginPage(BaseClass.getDriver());
+
+		// Always use the ThreadLocal-safe getter
+		BaseClass.getDriver().get(config.getProperty("StudentLoginPage"));
 	}
 
 	@When("the user enters username {string} and password {string}")
@@ -44,7 +47,7 @@ public class StudentLoginPageStepDef extends BaseClass {
 
 	@Then("verify new page URL contains {string}")
 	public void verify_new_page_url_contains(String url) {
-		Assert.assertEquals(BaseClass.driver.getCurrentUrl(), url);
+		Assert.assertEquals(BaseClass.getDriver().getCurrentUrl(), url);
 
 	}
 
@@ -59,23 +62,11 @@ public class StudentLoginPageStepDef extends BaseClass {
 
 	}
 
-	@When("clicks on the login button")
-	public void clicks_on_the_login_button() {
-		// Write code here that turns the phrase above into concrete actions
-		throw new io.cucumber.java.PendingException();
-	}
-
 	@Then("an error message {string} should be displayed")
 	public void an_error_message_should_be_displayed(String err) {
 		String actualMessage = sp.getErrorMessage();
-		Assert.assertTrue(actualMessage.contains(err)
-				|| actualMessage.contains(err));
+		Assert.assertTrue(actualMessage.equals(err));
 	}
 
-	@Then("error message should be displayed")
-	public void error_message_should_be_displayed() {
-		String actualMessage = sp.getErrorMessage();
-		Assert.assertTrue(actualMessage.contains("Your username is invalid!")
-				|| actualMessage.contains("Your password is invalid!"));
-	}
+	
 }

@@ -9,26 +9,27 @@ import java.time.Duration;
 
 public class WaitUtility extends BaseClass {
 
+    WebDriver driver = BaseClass.getDriver();
 
     public WaitUtility(WebDriver driver) {
-        BaseClass.driver = driver;
+       this.driver = driver;
     }
 
     // Explicit wait for element visibility
     public WebElement waitForVisibility(By locator, int timeoutInSeconds) {
-        WebDriverWait wait = new WebDriverWait(BaseClass.driver, Duration.ofSeconds(timeoutInSeconds));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeoutInSeconds));
         return wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
     }
 
     // Wait for element to be clickable
     public WebElement waitForClickable(By locator, int timeoutInSeconds) {
-        WebDriverWait wait = new WebDriverWait(BaseClass.driver, Duration.ofSeconds(timeoutInSeconds));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeoutInSeconds));
         return wait.until(ExpectedConditions.elementToBeClickable(locator));
     }
 
     // Fluent wait example
     public WebElement fluentWait(By locator, int timeoutInSeconds, int pollingInMillis) {
-        Wait<WebDriver> wait = new FluentWait<>(BaseClass.driver)
+        Wait<WebDriver> wait = new FluentWait<>(driver)
                 .withTimeout(Duration.ofSeconds(timeoutInSeconds))
                 .pollingEvery(Duration.ofMillis(pollingInMillis))
                 .ignoring(NoSuchElementException.class);

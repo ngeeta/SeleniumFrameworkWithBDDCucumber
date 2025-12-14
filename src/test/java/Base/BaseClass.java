@@ -11,7 +11,25 @@ import Utilities.WaitUtility;
 
 public class BaseClass {
 
-	public static WebDriver driver;
+	//public static WebDriver driver;
+	// ThreadLocal driver for thread safety
+    private static ThreadLocal<WebDriver> driver = new ThreadLocal<>();
+
+    public static WebDriver getDriver() {
+        return driver.get();
+    }
+
+    public static void setDriver(WebDriver driverInstance) {
+        driver.set(driverInstance);
+    }
+
+    public static void cleanupDriver() {
+        if (driver.get() != null) {
+            driver.get().quit();
+            driver.remove();
+        }
+    }
+
 	public static WaitUtility waitUtility;
 	public static ExtentSparkReporter extentSparkReporter;
 	public String browser;

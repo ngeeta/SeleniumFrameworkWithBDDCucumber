@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary">Cucumber Suite</span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">Dec 14, 2025 02:31:58 pm</span></a>
+<a href="#"><span class="badge badge-primary">Dec 14, 2025 05:44:41 pm</span></a>
 </li>
 </ul>
 </div>
@@ -50,6 +50,11 @@
 <li class="nav-item dropdown" onclick="toggleView('exception-view')">
 <a id="nav-exception" class="dropdown-toggle" href="#">
 <span class="ico"><i class="fa fa-bug"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('category-view')">
+<a id="nav-category" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-tag"></i></span>
 </a>
 </li>
 <li class="nav-item dropdown" onclick="toggleView('dashboard-view')">
@@ -76,6 +81,12 @@
 <a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
 </ul>
 </li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-tag"></i></a>
+<ul id="tag-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" href="#">@ignore</a>
+</ul>
+</li>
 </ul>
 </div>    <div class="test-list-wrapper scrollable">
       <ul class="test-list-item">
@@ -86,7 +97,7 @@
           <div class="test-detail">
             <p class="name">Test Login Page</p>
             <p class="text-sm">
-              <span>14:31:59</span> / <span>00:00:10:422</span>
+              <span>17:44:42</span> / <span>00:00:17:211</span>
               <span class="badge fail-bg log float-right">Fail</span>
             </p>
           </div>
@@ -95,9 +106,9 @@
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-fail">Test Login Page</h5>
-<span class='badge badge-success'>12.14.2025 14:31:59</span>
-<span class='badge badge-danger'>12.14.2025 14:32:09</span>
-<span class='badge badge-default'>00:00:10:422</span>
+<span class='badge badge-success'>12.14.2025 17:44:42</span>
+<span class='badge badge-danger'>12.14.2025 17:44:59</span>
+<span class='badge badge-default'>00:00:17:211</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -111,85 +122,16 @@
     <div class="card-header" role="tab">
       <div class="card-title">
         <div class="node" id="2"><span class="badge log fail-bg mr-2">Fail</span>Invalid login – <case></div>
+          <div class="status-avatar float-right mr-4">
+            <i class="fa fa-paperclip"></i>
+          </div>
       </div>
     </div>
         <div class="scenario_outline ">
             <div class="card-body l1">
               <div class="card-header">
                 <div class="card-title outline-child">
-                  <div class="node" id="3"><span class="badge log fail-bg mr-2">Fail</span>Invalid login – wrong password</div>
-                </div>
-              </div>
-              <div class="card-body mt-3 ">
-                  <div class="step pass-bg">
-                    <span>Given user is on the login page</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step fail-bg">
-                    <span>When the user enters username "VALID_USER" and password "wrongPass"</span>
-      <div>
-        <textarea disabled class="code-block">org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
-Build info: version: '4.39.0', revision: '126f156aee'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '22'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [null, findElement {using=id, value=password}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.110, chrome: {chromedriverVersion: 143.0.7499.42 (24bdc8c48a0c..., userDataDir: C:\Users\geeta\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52466}, goog:processID: 26064, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52466/devtoo..., se:cdpVersion: 143.0.7499.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:176)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:561)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:166)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:384)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:378)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy25.sendKeys(Unknown Source)
-	at Pages.StudentLoginPage.enterPassword(StudentLoginPage.java:30)
-	at StepDefinitions.StudentLoginPageStepDef.the_user_enters_username_and_password(StudentLoginPageStepDef.java:29)
-	at ✽.the user enters username "VALID_USER" and password "wrongPass"(file:///D:/Edrive/Study/Geeta_Workspace/com.SeleniumBDDTestNg/src/test/resources/Features/StudentLogin.feature:14)
-</textarea>
-      
-      </div>
-                  </div>
-                  <div class="step skip-bg">
-                    <span>And clicks on login button</span>
-      <div>Step skipped
-      </div>
-                  </div>
-                  <div class="step skip-bg">
-                    <span>Then an error message "Your password is invalid!" should be displayed</span>
-      <div>Step skipped
-      </div>
-                  </div>
-                  <div class="step fail-bg">
-                    <span>Utilities.Hooks.tearDown(io.cucumber.java.Scenario)</span>
-      <div>
-        <textarea disabled class="code-block">org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
-Build info: version: '4.39.0', revision: '126f156aee'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '22'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [null, screenshot {}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.110, chrome: {chromedriverVersion: 143.0.7499.42 (24bdc8c48a0c..., userDataDir: C:\Users\geeta\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52466}, goog:processID: 26064, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52466/devtoo..., se:cdpVersion: 143.0.7499.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:176)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:561)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:638)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:642)
-	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:350)
-	at Utilities.Hooks.tearDown(Hooks.java:59)
-</textarea>
-      
-      </div>
-                  </div>
-              </div>
-            </div>
-            <div class="card-body l1">
-              <div class="card-header">
-                <div class="card-title outline-child">
-                  <div class="node" id="5"><span class="badge log pass-bg mr-2">Pass</span>Invalid login – invalid user/pass</div>
+                  <div class="node" id="3"><span class="badge log pass-bg mr-2">Pass</span>Invalid login – invalid user/pass</div>
                 </div>
               </div>
               <div class="card-body mt-3 collapse">
@@ -218,7 +160,39 @@ Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 1
             <div class="card-body l1">
               <div class="card-header">
                 <div class="card-title outline-child">
-                  <div class="node" id="6"><span class="badge log fail-bg mr-2">Fail</span>Invalid login – blank credentials</div>
+                  <div class="node" id="4"><span class="badge log pass-bg mr-2">Pass</span>Invalid login – blank credentials</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given user is on the login page</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When the user enters username "" and password ""</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And clicks on login button</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then an error message "Your username is invalid!" should be displayed</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="5"><span class="badge log fail-bg mr-2">Fail</span>Invalid login – wrong password</div>
+                    <div class="status-avatar float-right">
+                      <i class="fa fa-paperclip"></i>
+                    </div>
                 </div>
               </div>
               <div class="card-body mt-3 ">
@@ -228,7 +202,7 @@ Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 1
       </div>
                   </div>
                   <div class="step pass-bg">
-                    <span>When the user enters username "blankUser" and password "blankPass"</span>
+                    <span>When the user enters username "VALID_USER" and password "wrongPass"</span>
       <div>
       </div>
                   </div>
@@ -238,125 +212,48 @@ Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 1
       </div>
                   </div>
                   <div class="step fail-bg">
-                    <span>Then an error message "Your username is invalid!" should be displayed</span>
+                    <span>Then an error message "Your password is invalid!" should be displayed</span>
       <div>
-        <textarea disabled class="code-block">org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
+        <textarea disabled class="code-block">org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
 Build info: version: '4.39.0', revision: '126f156aee'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '22'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [c109bfe579b63abfe03324da10e25af8, getElementText [id]]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.110, chrome: {chromedriverVersion: 143.0.7499.42 (24bdc8c48a0c..., userDataDir: C:\Users\geeta\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52466}, goog:processID: 26064, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52466/devtoo..., se:cdpVersion: 143.0.7499.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (c109bfe579b63abfe03324da10e25af8)] -> id: error]
-Session ID: c109bfe579b63abfe03324da10e25af8
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:592)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-	at org.openqa.selenium.remote.RemoteWebElement.getText(RemoteWebElement.java:191)
-	at Pages.StudentLoginPage.getErrorMessage(StudentLoginPage.java:55)
-	at StepDefinitions.StudentLoginPageStepDef.an_error_message_should_be_displayed(StudentLoginPageStepDef.java:70)
-	at ✽.an error message "Your username is invalid!" should be displayed(file:///D:/Edrive/Study/Geeta_Workspace/com.SeleniumBDDTestNg/src/test/resources/Features/StudentLogin.feature:16)
-Caused by: java.io.UncheckedIOException: java.io.IOException: Task jdk.internal.net.http.common.SequentialScheduler$SchedulableTask@5bfb557d rejected from java.util.concurrent.ThreadPoolExecutor@742a20b1[Shutting down, pool size = 2, active threads = 2, queued tasks = 0, completed tasks = 154]
-	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute0(JdkHttpClient.java:503)
-	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:44)
-	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:55)
-	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.lambda$executeAsync$2(JdkHttpClient.java:388)
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1570)
-Caused by: java.io.IOException: Task jdk.internal.net.http.common.SequentialScheduler$SchedulableTask@5bfb557d rejected from java.util.concurrent.ThreadPoolExecutor@742a20b1[Shutting down, pool size = 2, active threads = 2, queued tasks = 0, completed tasks = 154]
-	at java.net.http/jdk.internal.net.http.HttpClientImpl.send(HttpClientImpl.java:971)
-	at java.net.http/jdk.internal.net.http.HttpClientFacade.send(HttpClientFacade.java:133)
-	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute0(JdkHttpClient.java:462)
-	... 8 more
-Caused by: java.util.concurrent.RejectedExecutionException: Task jdk.internal.net.http.common.SequentialScheduler$SchedulableTask@5bfb557d rejected from java.util.concurrent.ThreadPoolExecutor@742a20b1[Shutting down, pool size = 2, active threads = 2, queued tasks = 0, completed tasks = 154]
-	at java.base/java.util.concurrent.ThreadPoolExecutor$AbortPolicy.rejectedExecution(ThreadPoolExecutor.java:2081)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.reject(ThreadPoolExecutor.java:841)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.execute(ThreadPoolExecutor.java:1376)
-	at java.net.http/jdk.internal.net.http.HttpClientImpl$DelegatingExecutor.ensureExecutedAsync(HttpClientImpl.java:184)
-	at java.net.http/jdk.internal.net.http.HttpClientImpl$DelegatingExecutor.execute(HttpClientImpl.java:176)
-	at java.net.http/jdk.internal.net.http.common.SequentialScheduler.runOrSchedule(SequentialScheduler.java:282)
-	at java.net.http/jdk.internal.net.http.common.SequentialScheduler.runOrSchedule(SequentialScheduler.java:251)
-	at java.net.http/jdk.internal.net.http.Http1AsyncReceiver.onReadError(Http1AsyncReceiver.java:516)
-	at java.net.http/jdk.internal.net.http.Http1AsyncReceiver$Http1TubeSubscriber.onComplete(Http1AsyncReceiver.java:601)
-	at java.net.http/jdk.internal.net.http.SocketTube$InternalReadPublisher$ReadSubscription.signalCompletion(SocketTube.java:648)
-	at java.net.http/jdk.internal.net.http.SocketTube$InternalReadPublisher$InternalReadSubscription.read(SocketTube.java:853)
-	at java.net.http/jdk.internal.net.http.SocketTube$SocketFlowTask.run(SocketTube.java:181)
-	at java.net.http/jdk.internal.net.http.common.SequentialScheduler$SchedulableTask.run(SequentialScheduler.java:207)
-	at java.net.http/jdk.internal.net.http.common.SequentialScheduler.runOrSchedule(SequentialScheduler.java:280)
-	at java.net.http/jdk.internal.net.http.common.SequentialScheduler.runOrSchedule(SequentialScheduler.java:233)
-	at java.net.http/jdk.internal.net.http.SocketTube$InternalReadPublisher$InternalReadSubscription.signalReadable(SocketTube.java:782)
-	at java.net.http/jdk.internal.net.http.SocketTube$InternalReadPublisher$ReadEvent.signalEvent(SocketTube.java:965)
-	at java.net.http/jdk.internal.net.http.SocketTube$SocketFlowEvent.handle(SocketTube.java:253)
-	at java.net.http/jdk.internal.net.http.HttpClientImpl$SelectorManager.handleEvent(HttpClientImpl.java:1476)
-	at java.net.http/jdk.internal.net.http.HttpClientImpl$SelectorManager.lambda$run$3(HttpClientImpl.java:1421)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-	at java.net.http/jdk.internal.net.http.HttpClientImpl$SelectorManager.run(HttpClientImpl.java:1421)
+Command: [null, findElement {value=error, using=id}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.110, chrome: {chromedriverVersion: 143.0.7499.42 (24bdc8c48a0c..., userDataDir: C:\Users\geeta\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62957}, goog:processID: 9936, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62957/devtoo..., se:cdpVersion: 143.0.7499.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:176)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:561)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:166)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:384)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:378)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:198)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:194)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	at Utilities.WaitUtility.waitForVisibility(WaitUtility.java:21)
+	at Pages.StudentLoginPage.getErrorMessage(StudentLoginPage.java:65)
+	at StepDefinitions.StudentLoginPageStepDef.an_error_message_should_be_displayed(StudentLoginPageStepDef.java:67)
+	at ✽.an error message "Your password is invalid!" should be displayed(file:///D:/Edrive/Study/Geeta_Workspace/com.SeleniumBDDTestNg/src/test/resources/Features/StudentLogin.feature:16)
 </textarea>
       
       </div>
                   </div>
-                  <div class="step fail-bg">
+                  <div class="step pass-bg">
                     <span>Utilities.Hooks.tearDown(io.cucumber.java.Scenario)</span>
+      <div>Failed Screenshot
+          <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='test-output/embedded1.png' src="test-output/embedded1.png">
+  
+    
+
+    </div></div>
+</div>
+      <div>Scenario failed: Invalid login – wrong password
+      </div>
       <div>
-        <textarea disabled class="code-block">org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
-Build info: version: '4.39.0', revision: '126f156aee'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '22'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [c109bfe579b63abfe03324da10e25af8, screenshot []]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.110, chrome: {chromedriverVersion: 143.0.7499.42 (24bdc8c48a0c..., userDataDir: C:\Users\geeta\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52466}, goog:processID: 26064, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52466/devtoo..., se:cdpVersion: 143.0.7499.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: c109bfe579b63abfe03324da10e25af8
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:592)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:638)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:642)
-	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:350)
-	at Utilities.Hooks.tearDown(Hooks.java:59)
-Caused by: java.util.concurrent.RejectedExecutionException: Task java.util.concurrent.FutureTask@3834eb4e[Not completed, task = java.util.concurrent.Executors$RunnableAdapter@7cf1d5da[Wrapped task = org.openqa.selenium.remote.http.jdk.JdkHttpClient$$Lambda/0x000001f4903c1cb8@123e2d1b]] rejected from java.util.concurrent.ThreadPoolExecutor@742a20b1[Terminated, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 156]
-	at java.base/java.util.concurrent.ThreadPoolExecutor$AbortPolicy.rejectedExecution(ThreadPoolExecutor.java:2081)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.reject(ThreadPoolExecutor.java:841)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.execute(ThreadPoolExecutor.java:1376)
-	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:123)
-	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.executeAsync(JdkHttpClient.java:385)
-	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute(JdkHttpClient.java:414)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:212)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:561)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:638)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:642)
-	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:350)
-	at Utilities.Hooks.tearDown(Hooks.java:59)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
-	at io.cucumber.java.Invoker.invoke(Invoker.java:24)
-	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
-	at io.cucumber.java.JavaHookDefinition.execute(JavaHookDefinition.java:64)
-	at io.cucumber.core.runner.CoreHookDefinition.execute(CoreHookDefinition.java:46)
-	at io.cucumber.core.runner.HookDefinitionMatch.runStep(HookDefinitionMatch.java:21)
-	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
-	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:84)
-	at io.cucumber.core.runner.TestStep.run(TestStep.java:56)
-	at io.cucumber.core.runner.TestCase.run(TestCase.java:90)
-	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
-	at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:132)
-	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
-	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
-	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
-	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:129)
-	at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-	at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:81)
-	at org.testng.internal.thread.Async$AsyncTask.run(Async.java:34)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1570)
-</textarea>
-      
       </div>
                   </div>
               </div>
@@ -366,13 +263,10 @@ Caused by: java.util.concurrent.RejectedExecutionException: Task java.util.concu
   <div class="card">
     <div class="card-header" role="tab">
       <div class="card-title">
-        <div class="node" id="4"><span class="badge log fail-bg mr-2">Fail</span>Valid login with correct credentials</div>
-          <div class="status-avatar float-right mr-4">
-            <i class="fa fa-paperclip"></i>
-          </div>
+        <div class="node" id="6"><span class="badge log pass-bg mr-2">Pass</span>Valid login with correct credentials</div>
       </div>
     </div>
-        <div class="">
+        <div class="collapse">
           <div class="card-body">
               <div class="step pass-bg" title="StepDefinitions.StudentLoginPageStepDef.user_is_on_the_login_page()">
                 <span>Given user is on the login page</span>
@@ -389,115 +283,19 @@ Caused by: java.util.concurrent.RejectedExecutionException: Task java.util.concu
       <div>
       </div>
               </div>
-              <div class="step fail-bg" title="StepDefinitions.StudentLoginPageStepDef.verify_new_page_url_contains(java.lang.String)">
+              <div class="step pass-bg" title="StepDefinitions.StudentLoginPageStepDef.verify_new_page_url_contains(java.lang.String)">
                 <span>Then verify new page URL contains "https://practicetestautomation.com/logged-in-successfully/"</span>
       <div>
-        <textarea disabled class="code-block">java.lang.AssertionError: expected [https://practicetestautomation.com/logged-in-successfully/] but found [https://practicetestautomation.com/practice-test-login/]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1590)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:656)
-	at org.testng.Assert.assertEquals(Assert.java:666)
-	at StepDefinitions.StudentLoginPageStepDef.verify_new_page_url_contains(StudentLoginPageStepDef.java:47)
-	at ✽.verify new page URL contains "https://practicetestautomation.com/logged-in-successfully/"(file:///D:/Edrive/Study/Geeta_Workspace/com.SeleniumBDDTestNg/src/test/resources/Features/StudentLogin.feature:8)
-</textarea>
-      
       </div>
               </div>
-              <div class="step skip-bg" title="StepDefinitions.StudentLoginPageStepDef.verify_new_page_contains_expected_text(java.lang.String)">
+              <div class="step pass-bg" title="StepDefinitions.StudentLoginPageStepDef.verify_new_page_contains_expected_text(java.lang.String)">
                 <span>And verify new page contains expected text "Congratulations student. You successfully logged in!"</span>
-      <div>Step skipped
-      </div>
-              </div>
-              <div class="step skip-bg" title="StepDefinitions.StudentLoginPageStepDef.verify_button_log_out_is_displayed_on_the_new_page()">
-                <span>And Verify button Log out is displayed on the new page</span>
-      <div>Step skipped
-      </div>
-              </div>
-              <div class="step fail-bg" title="AFTER">
-                <span>Utilities.Hooks.tearDown(io.cucumber.java.Scenario)</span>
-      <div>image
-          <div class="row mb-3"><div class="col-md-3">
-    
-
-<img data-featherlight='test-output/embedded1.png' src="test-output/embedded1.png">
-  
-    
-
-    </div></div>
-</div>
-      <div>Scenario failed: Valid login with correct credentials
-      </div>
-      <div>Navigated to Login page
-      </div>
       <div>
-        <textarea disabled class="code-block">org.openqa.selenium.WebDriverException: Timed out waiting for driver server to stop.
-Build info: version: '4.39.0', revision: '126f156aee'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '22'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [c109bfe579b63abfe03324da10e25af8, quit {}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.110, chrome: {chromedriverVersion: 143.0.7499.42 (24bdc8c48a0c..., userDataDir: C:\Users\geeta\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52466}, goog:processID: 26064, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52466/devtoo..., se:cdpVersion: 143.0.7499.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:164)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:561)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:638)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:642)
-	at org.openqa.selenium.remote.RemoteWebDriver.quit(RemoteWebDriver.java:462)
-	at org.openqa.selenium.chromium.ChromiumDriver.quit(ChromiumDriver.java:414)
-	at Utilities.Hooks.tearDown(Hooks.java:79)
-Caused by: java.util.concurrent.ExecutionException: java.util.concurrent.RejectedExecutionException: Task java.util.concurrent.FutureTask@4003a6f1[Not completed, task = java.util.concurrent.Executors$RunnableAdapter@13eacca[Wrapped task = org.openqa.selenium.remote.http.jdk.JdkHttpClient$$Lambda/0x000001f4903c1cb8@5013835]] rejected from java.util.concurrent.ThreadPoolExecutor@742a20b1[Shutting down, pool size = 2, active threads = 2, queued tasks = 0, completed tasks = 154]
-	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:396)
-	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:160)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:561)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:638)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:642)
-	at org.openqa.selenium.remote.RemoteWebDriver.quit(RemoteWebDriver.java:462)
-	at org.openqa.selenium.chromium.ChromiumDriver.quit(ChromiumDriver.java:414)
-	at Utilities.Hooks.tearDown(Hooks.java:79)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
-	at io.cucumber.java.Invoker.invoke(Invoker.java:24)
-	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
-	at io.cucumber.java.JavaHookDefinition.execute(JavaHookDefinition.java:64)
-	at io.cucumber.core.runner.CoreHookDefinition.execute(CoreHookDefinition.java:46)
-	at io.cucumber.core.runner.HookDefinitionMatch.runStep(HookDefinitionMatch.java:21)
-	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
-	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:84)
-	at io.cucumber.core.runner.TestStep.run(TestStep.java:56)
-	at io.cucumber.core.runner.TestCase.run(TestCase.java:90)
-	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
-	at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:132)
-	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
-	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
-	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
-	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:129)
-	at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-	at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:81)
-	at org.testng.internal.thread.Async$AsyncTask.run(Async.java:34)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1570)
-Caused by: java.util.concurrent.RejectedExecutionException: Task java.util.concurrent.FutureTask@4003a6f1[Not completed, task = java.util.concurrent.Executors$RunnableAdapter@13eacca[Wrapped task = org.openqa.selenium.remote.http.jdk.JdkHttpClient$$Lambda/0x000001f4903c1cb8@5013835]] rejected from java.util.concurrent.ThreadPoolExecutor@742a20b1[Shutting down, pool size = 2, active threads = 2, queued tasks = 0, completed tasks = 154]
-	at java.base/java.util.concurrent.ThreadPoolExecutor$AbortPolicy.rejectedExecution(ThreadPoolExecutor.java:2081)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.reject(ThreadPoolExecutor.java:841)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.execute(ThreadPoolExecutor.java:1376)
-	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:123)
-	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.executeAsync(JdkHttpClient.java:385)
-	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute(JdkHttpClient.java:414)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:212)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.lambda$execute$1(DriverCommandExecutor.java:126)
-	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768)
-	... 3 more
-</textarea>
-      
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinitions.StudentLoginPageStepDef.verify_button_log_out_is_displayed_on_the_new_page()">
+                <span>And Verify button Log out is displayed on the new page</span>
+      <div>
       </div>
               </div>
           </div>
@@ -519,67 +317,21 @@ Caused by: java.util.concurrent.RejectedExecutionException: Task java.util.concu
 <div class="test-list">
 <div class="test-list-tools">
 <ul class="tools pull-left"><li><a href=""><span class="font-size-14">Exception</span></a></li></ul>
-<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">4</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">1</span></a></li></ul>
 </div>
 <div class="test-list-wrapper scrollable">
 <ul class="test-list-item">
 <li class="test-item">
 <div class="test-detail">
 <span class="meta">
-<span class='badge log badge-danger'>2</span>
+<span class='badge log badge-danger'>1</span>
 </span>
 <p class="name">org.openqa.selenium.NoSuchSessionException</p>
-<p class="duration text-sm">2 tests</p>
+<p class="duration text-sm">1 tests</p>
 </div>
 <div class="test-contents d-none">
 <div class="info">
 <h4>org.openqa.selenium.NoSuchSessionException</h4>
-<span status="fail" class='badge log badge-danger'>2 failed</span>
-</div>
-<table class='table table-sm mt-4'>
-<thead>
-<tr>
-<th class="status-col">Status</th>
-<th class="timestamp-col">Timestamp</th>
-<th>TestName</th>
-</tr>
-</thead>
-<tbody>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>14:32:09 pm</td>
-<td>
-<a href="#" class="linked" test-id='1' id='29'>When the user enters username "VALID_USER" and password "wrongPass"</a>
-<div class="">
-<span class="badge badge-default">Test Login Page.Invalid login – wrong password.When the user enters username "VALID_USER" and password "wrongPass"</span>
-</div>
-</td>
-</tr>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>14:32:09 pm</td>
-<td>
-<a href="#" class="linked" test-id='1' id='32'>Utilities.Hooks.tearDown(io.cucumber.java.Scenario)</a>
-<div class="">
-<span class="badge badge-default">Test Login Page.Invalid login – wrong password.Utilities.Hooks.tearDown(io.cucumber.java.Scenario)</span>
-</div>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-</li>
-<li class="test-item">
-<div class="test-detail">
-<span class="meta">
-<span class='badge log badge-danger'>1</span>
-</span>
-<p class="name">java.lang.AssertionError</p>
-<p class="duration text-sm">1 tests</p>
-</div>
-<div class="test-contents d-none">
-<div class="info">
-<h4>java.lang.AssertionError</h4>
 <span status="fail" class='badge log badge-danger'>1 failed</span>
 </div>
 <table class='table table-sm mt-4'>
@@ -593,11 +345,11 @@ Caused by: java.util.concurrent.RejectedExecutionException: Task java.util.concu
 <tbody>
 <tr class="tag-test-status" status="fail">
 <td><span class="badge log fail-bg">Fail</span></td>
-<td>14:32:08 pm</td>
+<td>17:44:57 pm</td>
 <td>
-<a href="#" class="linked" test-id='1' id='20'>Then verify new page URL contains "https://practicetestautomation.com/logged-in-successfully/"</a>
+<a href="#" class="linked" test-id='1' id='31'>Then an error message "Your password is invalid!" should be displayed</a>
 <div class="">
-<span class="badge badge-default">Test Login Page.Valid login with correct credentials.Then verify new page URL contains "https://practicetestautomation.com/logged-in-successfully/"</span>
+<span class="badge badge-default">Test Login Page.Invalid login – wrong password.Then an error message "Your password is invalid!" should be displayed</span>
 </div>
 </td>
 </tr>
@@ -605,63 +357,35 @@ Caused by: java.util.concurrent.RejectedExecutionException: Task java.util.concu
 </table>
 </div>
 </li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div><div class="test-wrapper row view category-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Category</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">1</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
 <li class="test-item">
 <div class="test-detail">
 <span class="meta">
-<span class='badge log badge-danger'>2</span>
-</span>
-<p class="name">org.openqa.selenium.remote.UnreachableBrowserException</p>
-<p class="duration text-sm">2 tests</p>
-</div>
-<div class="test-contents d-none">
-<div class="info">
-<h4>org.openqa.selenium.remote.UnreachableBrowserException</h4>
-<span status="fail" class='badge log badge-danger'>2 failed</span>
-</div>
-<table class='table table-sm mt-4'>
-<thead>
-<tr>
-<th class="status-col">Status</th>
-<th class="timestamp-col">Timestamp</th>
-<th>TestName</th>
-</tr>
-</thead>
-<tbody>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>14:32:09 pm</td>
-<td>
-<a href="#" class="linked" test-id='1' id='27'>Then an error message "Your username is invalid!" should be displayed</a>
-<div class="">
-<span class="badge badge-default">Test Login Page.Invalid login – blank credentials.Then an error message "Your username is invalid!" should be displayed</span>
-</div>
-</td>
-</tr>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>14:32:09 pm</td>
-<td>
-<a href="#" class="linked" test-id='1' id='28'>Utilities.Hooks.tearDown(io.cucumber.java.Scenario)</a>
-<div class="">
-<span class="badge badge-default">Test Login Page.Invalid login – blank credentials.Utilities.Hooks.tearDown(io.cucumber.java.Scenario)</span>
-</div>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-</li>
-<li class="test-item">
-<div class="test-detail">
-<span class="meta">
+<span class='badge log pass-bg'>2</span>
 <span class='badge log badge-danger'>1</span>
 </span>
-<p class="name">org.openqa.selenium.WebDriverException</p>
-<p class="duration text-sm">1 tests</p>
+<p class="name">@ignore</p>
+<p class="duration text-sm">3 tests</p>
 </div>
 <div class="test-contents d-none">
 <div class="info">
-<h4>org.openqa.selenium.WebDriverException</h4>
+<h4>@ignore</h4>
+<span status="pass" class='badge log pass-bg'>2 passed</span>
 <span status="fail" class='badge log badge-danger'>1 failed</span>
 </div>
 <table class='table table-sm mt-4'>
@@ -673,13 +397,33 @@ Caused by: java.util.concurrent.RejectedExecutionException: Task java.util.concu
 </tr>
 </thead>
 <tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>17:44:42 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='3'>Invalid login – invalid user/pass</a>
+<div class="">
+<span class="badge badge-default">Test Login Page.Invalid login – invalid user/pass</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>17:44:42 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='4'>Invalid login – blank credentials</a>
+<div class="">
+<span class="badge badge-default">Test Login Page.Invalid login – blank credentials</span>
+</div>
+</td>
+</tr>
 <tr class="tag-test-status" status="fail">
 <td><span class="badge log fail-bg">Fail</span></td>
-<td>14:32:08 pm</td>
+<td>17:44:42 pm</td>
 <td>
-<a href="#" class="linked" test-id='1' id='23'>Utilities.Hooks.tearDown(io.cucumber.java.Scenario)</a>
+<a href="#" class="linked" test-id='1' id='5'>Invalid login – wrong password</a>
 <div class="">
-<span class="badge badge-default">Test Login Page.Valid login with correct credentials.Utilities.Hooks.tearDown(io.cucumber.java.Scenario)</span>
+<span class="badge badge-default">Test Login Page.Invalid login – wrong password</span>
 </div>
 </td>
 </tr>
@@ -700,13 +444,13 @@ Caused by: java.util.concurrent.RejectedExecutionException: Task java.util.concu
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>Dec 14, 2025 02:31:58 pm</h3>
+<h3>Dec 14, 2025 05:44:41 pm</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>Dec 14, 2025 02:32:09 pm</h3>
+<h3>Dec 14, 2025 05:44:59 pm</h3>
 </div></div>
 </div>
 <div class="col-md-3">
@@ -757,9 +501,9 @@ Caused by: java.util.concurrent.RejectedExecutionException: Task java.util.concu
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='25%'><b>1</b> scenarios passed</small></div>
+<div><small data-tooltip='75%'><b>3</b> scenarios passed</small></div>
 <div>
-<small data-tooltip='75%'><b>3</b> scenarios failed,
+<small data-tooltip='25%'><b>1</b> scenarios failed,
 <b>0</b> skipped, <b data-tooltip='%'>0</b> others
 </small>
 </div>
@@ -777,10 +521,10 @@ Caused by: java.util.concurrent.RejectedExecutionException: Task java.util.concu
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='52%'><b>11</b> steps passed</small></div>
+<div><small data-tooltip='94%'><b>18</b> steps passed</small></div>
 <div>
-<small data-tooltip='28%'><b>6</b> steps failed,
-<b>4</b> skipped, <b data-tooltip='%'>0</b> others
+<small data-tooltip='5%'><b>1</b> steps failed,
+<b>0</b> skipped, <b data-tooltip='%'>0</b> others
 </small>
 </div>
 </div>
@@ -796,10 +540,27 @@ Caused by: java.util.concurrent.RejectedExecutionException: Task java.util.concu
 </div></div>
 <script>
 var timeline = {
-"Test Login Page":10.422
+"Test Login Page":17.211
 };
 </script>
 <div class="row">
+<div class="col-lg-6 col-md-12 category-container">
+<div class="card">
+<div class="card-header"><p>Tags</p></div>
+<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+<thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead><tbody>
+<tr>
+<td>@ignore</td>
+<td>2</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>66.667%</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
 <div class="col-lg-6 col-md-12 sysenv-container">
 <div class="card">
 <div class="card-header"><p>System/Environment</p></div>
@@ -836,16 +597,16 @@ failParent: 1,
 warningParent: 0,
 skipParent: 0,
 childCount: 5,
-passChild: 1,
-failChild: 3,
+passChild: 3,
+failChild: 1,
 warningChild: 0,
 skipChild: 0,
 infoChild: 0,
 grandChildCount: 5,
-passGrandChild: 11,
-failGrandChild: 6,
+passGrandChild: 18,
+failGrandChild: 1,
 warningGrandChild: 0,
-skipGrandChild: 4,
+skipGrandChild: 0,
 infoGrandChild: 0,
 eventsCount: 5,
 };

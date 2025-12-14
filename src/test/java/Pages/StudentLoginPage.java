@@ -14,19 +14,30 @@ import Base.BaseClass;
 import Utilities.WaitUtility;
 
 public class StudentLoginPage extends BaseClass{
-	public StudentLoginPage(WebDriver driver) {
-		BaseClass.driver=driver;
-		BaseClass.waitUtility=new WaitUtility(BaseClass.driver);
-		PageFactory.initElements(driver, this);
-	}
-	
+	/*
+	 * public StudentLoginPage(WebDriver driver) { BaseClass.driver=driver;
+	 * BaseClass.waitUtility=new WaitUtility(BaseClass.driver);
+	 * PageFactory.initElements(driver, this); }
+	 */
+	 private WebDriver driver;
+
+		public StudentLoginPage(WebDriver driver) {
+			// Use ThreadLocal-safe getter/setter
+	        BaseClass.setDriver(driver);   // sets ThreadLocal
+	        this.driver = BaseClass.getDriver();
+
+			BaseClass.waitUtility=new WaitUtility(this.driver);
+			PageFactory.initElements(driver, this);
+		}
 	@FindBy (id="username") WebElement userName;
 	public void enterUserName(String user) {
+		userName.clear();
 		userName.sendKeys(user);
 	}
 	
 	@FindBy (id="password") WebElement password;
 	public void enterPassword(String pwd) {
+		password.clear();
 		password.sendKeys(pwd);
 	}
 	
