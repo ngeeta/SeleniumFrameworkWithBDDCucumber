@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>3/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Sun Dec 14 17:44:41 IST 2025</td>
+<td>Started on:</td><td>Sun Dec 14 18:52:40 IST 2025</td>
 </tr>
-<tr><td>Total time:</td><td>18 seconds (18523 ms)</td>
+<tr><td>Total time:</td><td>12 seconds (12755 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -77,51 +77,23 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='Runner.Runners.runScenario()'><b>runScenario</b><br>Test class: Runner.Runners<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Invalid login – wrong password", "Test Login Page"</td>
-<td><div><pre>org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
-Build info: version: &apos;4.39.0&apos;, revision: &apos;126f156aee&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;22&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [null, findElement {value=error, using=id}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.110, chrome: {chromedriverVersion: 143.0.7499.42 (24bdc8c48a0c..., userDataDir: C:\Users\geeta\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62957}, goog:processID: 9936, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62957/devtoo..., se:cdpVersion: 143.0.7499.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:176)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:561)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:166)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:384)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:378)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:198)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:194)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
-	at Utilities.WaitUtility.waitForVisibility(WaitUtility.java:21)
-	at Pages.StudentLoginPage.getErrorMessage(StudentLoginPage.java:65)
-	at StepDefinitions.StudentLoginPageStepDef.an_error_message_should_be_displayed(StudentLoginPageStepDef.java:67)
+<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at org.testng.Assert.assertTrue(Assert.java:67)
+	at StepDefinitions.StudentLoginPageStepDef.an_error_message_should_be_displayed(StudentLoginPageStepDef.java:68)
 	at ✽.an error message &quot;Your password is invalid!&quot; should be displayed(file:///D:/Edrive/Study/Geeta_Workspace/com.SeleniumBDDTestNg/src/test/resources/Features/StudentLogin.feature:16)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1443001649", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1443001649'><pre>org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
-Build info: version: &apos;4.39.0&apos;, revision: &apos;126f156aee&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;22&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [null, findElement {value=error, using=id}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.110, chrome: {chromedriverVersion: 143.0.7499.42 (24bdc8c48a0c..., userDataDir: C:\Users\geeta\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62957}, goog:processID: 9936, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62957/devtoo..., se:cdpVersion: 143.0.7499.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:176)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:561)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:166)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:384)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:378)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:198)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:194)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
-	at Utilities.WaitUtility.waitForVisibility(WaitUtility.java:21)
-	at Pages.StudentLoginPage.getErrorMessage(StudentLoginPage.java:65)
-	at StepDefinitions.StudentLoginPageStepDef.an_error_message_should_be_displayed(StudentLoginPageStepDef.java:67)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1406520131", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1406520131'><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at org.testng.Assert.assertTrue(Assert.java:67)
+	at StepDefinitions.StudentLoginPageStepDef.an_error_message_should_be_displayed(StudentLoginPageStepDef.java:68)
 	at ✽.an error message &quot;Your password is invalid!&quot; should be displayed(file:///D:/Edrive/Study/Geeta_Workspace/com.SeleniumBDDTestNg/src/test/resources/Features/StudentLogin.feature:16)
 </pre></div></td>
-<td>17</td>
+<td>11</td>
 <td>Runner.Runners@2f465398</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
@@ -133,19 +105,19 @@ Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 1
 <td><b>Instance</b></td>
 </tr>
 <tr>
+<td title='Runner.Runners.runScenario()'><b>runScenario</b><br>Test class: Runner.Runners<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Valid login with correct credentials", "Test Login Page"</td>
+<td></td>
+<td>11</td>
+<td>Runner.Runners@2f465398</td></tr>
+<tr>
 <td title='Runner.Runners.runScenario()'><b>runScenario</b><br>Test class: Runner.Runners<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Invalid login – invalid user/pass", "Test Login Page"</td>
 <td></td>
-<td>9</td>
+<td>11</td>
 <td>Runner.Runners@2f465398</td></tr>
 <tr>
 <td title='Runner.Runners.runScenario()'><b>runScenario</b><br>Test class: Runner.Runners<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Invalid login – blank credentials", "Test Login Page"</td>
 <td></td>
-<td>9</td>
-<td>Runner.Runners@2f465398</td></tr>
-<tr>
-<td title='Runner.Runners.runScenario()'><b>runScenario</b><br>Test class: Runner.Runners<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Valid login with correct credentials", "Test Login Page"</td>
-<td></td>
-<td>12</td>
+<td>10</td>
 <td>Runner.Runners@2f465398</td></tr>
 </table><p>
 </body>

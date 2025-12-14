@@ -23,7 +23,6 @@ public class StudentLoginPage extends BaseClass{
 
 		public StudentLoginPage(WebDriver driver) {
 			// Use ThreadLocal-safe getter/setter
-	        BaseClass.setDriver(driver);   // sets ThreadLocal
 	        this.driver = BaseClass.getDriver();
 
 			BaseClass.waitUtility=new WaitUtility(this.driver);
