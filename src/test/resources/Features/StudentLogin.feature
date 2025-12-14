@@ -11,12 +11,13 @@ Feature: Test Login Page
 
   Scenario Outline: Invalid login – <case>
     Given user is on the login page
-    When the user enters username "<username>" and password "<password>"
+   When the user enters username "<username>" and password "<password>"
+    
     And clicks on login button
     Then an error message "<errorMessage>" should be displayed
 
     Examples: 
-      | case              | username    | password    | errorMessage              |
+     | case              | username    | password    | errorMessage              |
       | wrong password    | VALID_USER  | wrongPass   | Your password is invalid! |
       | invalid user/pass | invalidUser | invalidPass | Your username is invalid! |
       | blank credentials |             |             | Your username is invalid! |
