@@ -66,6 +66,7 @@ public class StudentLoginPageStepDef extends BaseClass {
 	public void an_error_message_should_be_displayed(String err) {
 		String actualMessage = sp.getErrorMessage();
 		Assert.assertTrue(actualMessage.equals(err));
+		System.out.println("actual ---- "+actualMessage );
 	}
 
 	
