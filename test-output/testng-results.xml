@@ -1,43 +1,91 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-12-15T10:59:02 IST" name="Default suite" finished-at="2025-12-15T10:59:15 IST" duration-ms="12522">
+  <suite started-at="2025-12-17T10:29:12 IST" name="Default suite" finished-at="2025-12-17T10:29:42 IST" duration-ms="29920">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.Runners@2f465398]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2025-12-15T10:59:02 IST" name="Default test" finished-at="2025-12-15T10:59:15 IST" duration-ms="12522">
+    <test started-at="2025-12-17T10:29:12 IST" name="Default test" finished-at="2025-12-17T10:29:42 IST" duration-ms="29920">
       <class name="Runner.Runners">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:Runner.Runners@2f465398]" started-at="2025-12-15T10:59:02 IST" name="setUpClass" finished-at="2025-12-15T10:59:03 IST" duration-ms="733" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:Runner.Runners@2f465398]" started-at="2025-12-17T10:29:12 IST" name="setUpClass" finished-at="2025-12-17T10:29:13 IST" duration-ms="1029" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@e48bf9a]]>
+                <![CDATA[org.testng.TestRunner@49232c6f]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.Runners@2f465398]" started-at="2025-12-15T10:59:03 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-12-15T10:59:15 IST" duration-ms="11378" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.Runners@2f465398]" started-at="2025-12-17T10:29:13 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-12-17T10:29:25 IST" duration-ms="11866" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Test No Such Element Exception"]]>
+                <![CDATA["Valid login with correct credentials"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["Test Exception Page"]]>
+                <![CDATA["Test Login Page"]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:Runner.Runners@2f465398]" started-at="2025-12-15T10:59:15 IST" name="tearDownClass" finished-at="2025-12-15T10:59:15 IST" duration-ms="354" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.Runners@2f465398]" started-at="2025-12-17T10:29:25 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-12-17T10:29:30 IST" duration-ms="5571" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Invalid login – wrong password"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Test Login Page"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.Runners@2f465398]" started-at="2025-12-17T10:29:30 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-12-17T10:29:36 IST" duration-ms="5629" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Invalid login – invalid user/pass"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Test Login Page"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runner.Runners@2f465398]" started-at="2025-12-17T10:29:36 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-12-17T10:29:42 IST" duration-ms="5446" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Invalid login – blank credentials"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Test Login Page"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:Runner.Runners@2f465398]" started-at="2025-12-17T10:29:42 IST" name="tearDownClass" finished-at="2025-12-17T10:29:42 IST" duration-ms="319" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
