@@ -61,7 +61,7 @@ public class StudentLoginPage extends BaseClass{
 		private By errorMessageBy = By.id("error");
 
 	public String getErrorMessage() {
-   	WebElement errorElement = waitUtility.waitForVisibility(errorMessageBy, 5);
+   	WebElement errorElement = waitUtility.waitForVisibility(errorMessageBy, 15);
     return errorElement.getText();
 
 

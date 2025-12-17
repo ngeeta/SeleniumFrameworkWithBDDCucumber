@@ -1,8 +1,11 @@
 Utilities\Hooks.class
 Pages\StudentLoginPage.class
 StepDefinitions\StudentLoginPageStepDef.class
-Utilities\ConfigReader.class
 Utilities\FrameworkListeners.class
 Runner\Runners.class
 Base\BaseClass.class
+Utilities\ConfigReader.class
+StepDefinitions\ExceptionPageStepDef.class
+Pages\ExceptionPage.class
+Utilities\DriverFactory.class
 Utilities\WaitUtility.class

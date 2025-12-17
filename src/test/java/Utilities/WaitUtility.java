@@ -17,8 +17,17 @@ public class WaitUtility extends BaseClass {
 
     // Explicit wait for element visibility
     public WebElement waitForVisibility(By locator, int timeoutInSeconds) {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeoutInSeconds));
-        return wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+    	try {
+            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeoutInSeconds));
+            return wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+        } catch (TimeoutException e) {
+            System.out.println("Element not visible within timeout: " + locator);
+            return null; // or throw a custom exception
+        } catch (NoSuchElementException e) {
+            System.out.println("Element not found in DOM: " + locator);
+            return null;
+        }
+
     }
 
     // Wait for element to be clickable

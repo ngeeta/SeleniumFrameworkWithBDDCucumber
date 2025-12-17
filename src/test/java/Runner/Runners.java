@@ -8,6 +8,8 @@ import org.testng.annotations.DataProvider;
 
 @CucumberOptions(
 		features = "src/test/resources/Features/StudentLogin.feature",
+		//features = "src/test/resources/Features/ExceptionPage.feature",
+				//dryRun=true,
 				//tags = "@valid1",
 	    glue = {"StepDefinitions","Utilities"},
 	    		plugin = {
